@@ -1,12 +1,12 @@
-#ifndef SHELL_H
-#define SHELL_H
+#include "shell.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/stat.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-
-#endif
+/**
+ * main - simple shell
+ * @ac: number of arguments
+ * @av: array of pointers to the arguments
+ *
+ * Return: 0 if successful
+ */
+int main(int ac, char **av)
+{
+	while (1)
