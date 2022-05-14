@@ -8,7 +8,7 @@
  * Return: a pointer to the stored command
  *        0, otherwise
  */
-int *get_args(char *line, int *last_ret)
+char *get_args(char *line, int *last_ret)
 {
 	size_t n = 0;
 	ssize_t line_read;
