@@ -11,6 +11,7 @@ int execute(char **commands, char **parameters)
 {
 	pid_t child_pid;
 	char *command = commands[0];
+	int status, ret = 0;
 
 	child_pid = fork();
 
@@ -22,7 +23,7 @@ int execute(char **commands, char **parameters)
 	if (child_pid == 0)
 	{
 		execve(command, parameters, environ);
-		_EXIT(ret);
+		_Exit(ret);
 	}
 	else
 	{
@@ -48,7 +49,7 @@ int main(int ac, char **av)
 	{
 		write(STDOUT_FILENO, "$", 2);
 		ret = control_args(last_ret);
-		if (ret == EOF || EXIT)
+		if (ret == EOF)
 		{
 			if (ret == EOF)
 				write(STDOUT_FILENO, "\n", 1);
