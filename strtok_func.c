@@ -11,7 +11,7 @@ int token_length(char *string, char *delimiter)
 {
 	int len = 0, idx = 0;
 
-	while (*(string + idx) && *(string + edx) != *delimiter)
+	while (*(string + idx) && *(string + idx) != *delimiter)
 	{
 		len++;
 		idx++;
@@ -32,7 +32,7 @@ int number_of_tokens(char *string, char *delimiter)
 
 	for (idx = 0; *(string + idx); idx++)
 		len++;
-	for (idx = 0l idx < len; idx++)
+	for (idx = 0; idx < len; idx++)
 	{
 		while (*(string + idx) && *(string + idx) != *delimiter)
 		{
@@ -56,14 +56,14 @@ char **_strtok(char *line, char *delimiter)
 	int tokens, t, letters, l;
 	char **p;
 
-	tokens = _strtok(line, delimiter);
+	tokens = number_of_tokens(line, delimiter);
 	
 	if (!tokens)
 		return (0);
 
 	p = malloc(sizeof(char *) * (tokens + 2));
 
-	for (t = 0l t < tokens; t++)
+	for (t = 0; t < tokens; t++)
 	{
 		while (line[idx] == *delimiter)
 			idx++;
@@ -78,7 +78,10 @@ char **_strtok(char *line, char *delimiter)
 			idx++;
 		}
 		p[t][l] = '\0';
-		p[t] = NULL;
+		
 	}
-	return (p)
+	p[t] = NULL;
+	p[t + 1] = NULL;
+
+	return (p);
 }
