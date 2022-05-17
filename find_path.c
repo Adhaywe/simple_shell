@@ -45,3 +45,11 @@ char *get_location(char *command)
 	return (NULL);
 }
 
+/**
+ * fill_path_dir - Copies path but also replaces leading/sandwiched/trailing
+ *		   colons (:) with current working directory.
+ * @path: The colon-separated list of directories.
+ *
+ * Return: A copy of path with any leading/sandwiched/trailing colons replaced
+ *	   with the current working directory.
+ */
