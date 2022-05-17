@@ -40,3 +40,13 @@ alias_t *add_alias_end(alias_t **head, char *name, char *value)
 
 	return (new_node);
 }
+
+/**
+ * add_node_end - Adds a node to the end of a list_t linked list.
+ * @head: A pointer to the head of the list_t list.
+ * @dir: The directory path for the new node to contain.
+ *
+ * Return: If an error occurs - NULL.
+ *         Otherwise - a pointer to the new node.
+ */
+
