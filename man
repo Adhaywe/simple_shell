@@ -1,0 +1,8 @@
+.TH ASH "MAY 2022" "ALX School" "C - Simple Shell"
+.SH NAME
+.B ash\fR \- simple UNIX command interpreter
+.SH SYNOPSIS
+.B ash\fR [\fIfilename\fR]
+.SH DESCRIPTION
+.B ash\fR is a simple UNIX command language interpreter that reads commands from either a file or standard input and executes them.
+
