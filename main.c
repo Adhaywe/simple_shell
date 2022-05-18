@@ -1,6 +1,17 @@
 #include "shell.h"
 
 /**
+ * sig_handler - prints a new prompt upon a signal
+ * @sig: the input signal
+ */
+void sig_handler(int sig)
+{
+	(void)sig;
+	signal(SIGINT, sig_handler);
+	write(STDIN_FILENO, "\n$ ", 3);
+}
+
+/**
  * execute - Executes a command in a child process.
  * @args: An array of arguments.
  * @front: A double pointer to the beginning of args.
